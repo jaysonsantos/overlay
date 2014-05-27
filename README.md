@@ -12,4 +12,4 @@ Usage
 -----
 Add this overlay with [Layman](http://layman.sourceforge.net/) like this:
 
-    layman -o http://jaysonsantos.github.io/overlay/repositories.xml -f -a jaysonsantos
+    layman -o https://github.com/jaysonsantos/overlay/raw/master/layman.xml -f -a jaysonsantos
