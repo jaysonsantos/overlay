@@ -1,0 +1,6 @@
+--- schemas/CMakeLists.txt.old	2013-12-18 16:14:53.696701101 -0200
++++ schemas/CMakeLists.txt	2013-12-18 16:15:04.156691887 -0200
+@@ -1,2 +1,2 @@
+ include(GSettings)
+-add_schema("apps.rdio.gschema.xml")
++add_schema("org.gnome.apps.rdio.gschema.xml")

@@ -1,0 +1,13 @@
+diff --git a/rdio/Settings.vala b/rdio/Settings.vala
+index e1d3c13..8df9676 100644
+--- a/rdio/Settings.vala
++++ b/rdio/Settings.vala
+@@ -30,7 +30,7 @@ public class Rdio.Settings {
+ 	}
+ 
+ 	public Settings () {
+-		settings = new GLib.Settings ("apps.rdio");
++		settings = new GLib.Settings ("org.gnome.apps.rdio");
+ 	}
+ 
+ 	public int window_width {

@@ -1,0 +1,11 @@
+--- cmake/FindVala.cmake.old	2013-12-18 15:43:28.988506805 -0200
++++ cmake/FindVala.cmake	2013-12-18 15:45:38.358380593 -0200
+@@ -45,7 +45,7 @@
+ 
+ # Search for the valac executable in the usual system paths.
+ find_program(VALA_EXECUTABLE
+-  NAMES valac)
++  NAMES valac-0.20)
+ 
+ # Handle the QUIETLY and REQUIRED arguments, which may be given to the find call.
+ # Furthermore set VALA_FOUND to TRUE if Vala has been found (aka.

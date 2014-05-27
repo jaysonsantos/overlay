@@ -1,0 +1,46 @@
+diff --git a/Makefile.am b/Makefile.am
+index 63b6749..a990464 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -22,7 +22,6 @@ CFLAGS += -D_GNU_SOURCE
+ endif
+ 
+ CFLAGS += -Wno-unused-parameter -Wno-unused-variable
+-CFLAGS += -Ilibssh/include/ -Imsgpack/src
+ CFLAGS += -rdynamic # for stack traces
+ 
+ # Set flags for gcc. gcc4 whines abouts silly stuff so it needs slightly
+@@ -240,17 +239,3 @@ endif
+ if NO_B64_NTOP
+ nodist_tmate_SOURCES += compat/b64_ntop.c
+ endif
+-
+-tmate_LDADD = \
+-	libssh/build/src/libssh.a \
+-	msgpack/src/.libs/libmsgpackc.a
+-
+-*.c: $(tmate_LDADD)
+-
+-libssh/build/src/libssh.a:
+-	cd libssh/build && cmake .. -DWITH_SFTP=OFF -DWITH_SERVER=OFF -DWITH_PCAP=OFF -DWITH_STATIC_LIB=ON -DWITH_GSSAPI=OFF
+-	+make -C libssh/build ssh_static
+-
+-msgpack/src/.libs/libmsgpackc.a:
+-	cd msgpack && ./bootstrap && ./configure
+-	+make -C msgpack/src libmsgpackc.la
+diff --git a/configure.ac b/configure.ac
+index fcc4ded..45f223a 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -114,6 +114,11 @@ AC_CHECK_LIB(crypto,CRYPTO_new_ex_data, [],
+ AC_CHECK_LIB(ssl, SSL_library_init, [],
+ 	     [AC_MSG_ERROR([OpenSSL library required])])
+ 
++AC_CHECK_LIB(msgpack, msgpack_version, [],
++	     [AC_MSG_ERROR([msgpack library required])])
++AC_CHECK_LIB(ssh, ssh_new, [],
++	     [AC_MSG_ERROR([libssh >= 0.6.0 is required])])
++
+ # Look for libevent.
+ PKG_CHECK_MODULES(
+ 	LIBEVENT,

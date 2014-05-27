@@ -1,0 +1,26 @@
+--- schemas/org.gnome.apps.rdio.gschema.xml.old	2013-12-18 16:39:03.725433742 -0200
++++ schemas/org.gnome.apps.rdio.gschema.xml	2013-12-18 16:40:24.085363387 -0200
+@@ -1,12 +1,12 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <schemalist>
+-  <enum id="apps.rdio.WindowStates">
++  <enum id="org.gnome.apps.rdio.WindowStates">
+     <value nick="Normal" value="0" />
+     <value nick="Maximized" value="1" />
+     <value nick="Fullscreen" value="2" />
+   </enum>
+   
+-  <schema path="/apps/rdio/" id="apps.rdio" gettext-domain="rdio">
++  <schema path="/org/gnome/apps/rdio/" id="org.gnome.apps.rdio" gettext-domain="rdio">
+     <key type="i" name="window-width">
+       <default>1100</default>
+       <summary>Window width</summary>
+@@ -17,7 +17,7 @@
+       <summary>Window height</summary>
+       <description>Window height</description>
+     </key>
+-    <key name="window-state" enum="apps.rdio.WindowStates">
++    <key name="window-state" enum="org.gnome.apps.rdio.WindowStates">
+       <default>"Normal"</default>
+       <summary>The saved state of the window.</summary>
+       <description>The saved state of the window.</description>

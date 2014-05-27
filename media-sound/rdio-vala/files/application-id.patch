@@ -1,0 +1,13 @@
+diff --git a/rdio/Rdio.vala b/rdio/Rdio.vala
+index 2870660..4c9140d 100644
+--- a/rdio/Rdio.vala
++++ b/rdio/Rdio.vala
+@@ -40,7 +40,7 @@ public class Rdio.App : Gtk.Application {
+ 	#endif
+ 
+ 	public App () {
+-		application_id = "apps.rdio";
++		application_id = "org.gnome.apps.rdio";
+ 	}
+ 	
+ 	protected override void activate () {
