@@ -29,5 +29,6 @@ src_unpack() {
 src_install() {
 	insinto "/opt/${PN}"
 	doins -r . || die
-	make_wrapper keybase ./bin/main.js /opt/keybase/bin
+	chmod +x "${D}/opt/keybase/bin/main.js" || die
+	make_wrapper keybase ./main.js /opt/keybase/bin
 }
