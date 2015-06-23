@@ -3,6 +3,7 @@
 # $Header: $
 
 EAPI=5
+
 inherit qmake-utils
 
 DESCRIPTION=""
@@ -15,11 +16,11 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="
-	dev-qt/qtconcurrent:5
-	dev-qt/qtwidgets:5
-	dev-qt/qtsql:5
-	dev-qt/qtwebkit:5
-	dev-qt/qtx11extras:5
+	>=dev-qt/qtconcurrent-5.4.2:5
+	>=dev-qt/qtwidgets-5.4.2:5
+	>=dev-qt/qtsql-5.4.2:5
+	>=dev-qt/qtwebkit-5.4.2:5
+	>=dev-qt/qtx11extras-5.4.2:5
 	"
 RDEPEND="${DEPEND}"
 
@@ -32,5 +33,5 @@ src_compile() {
 }
 
 src_install() {
-	emake INSTALL_ROOT="${D}" install || die "emake isntall failed"
+	emake INSTALL_ROOT="${D}" install || die "emake install failed"
 }

@@ -29,6 +29,6 @@ src_compile() {
 }
 
 src_install() {
-	insinto /usr/bin
-	doins out/exercism
+	into /usr
+	dobin out/exercism 
 }
