@@ -23,7 +23,14 @@ DEPEND="
 	"
 RDEPEND="${DEPEND}"
 
-src_compile() {
+src_configure() {
 	eqmake5
+}
+
+src_compile() {
 	emake
+}
+
+src_install() {
+	emake INSTALL_ROOT="${D}" install || die "emake isntall failed"
 }
