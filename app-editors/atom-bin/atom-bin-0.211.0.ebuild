@@ -26,4 +26,5 @@ src_install() {
 	chmod 755 "${D}/usr/bin/atom"
 	chmod 755 "${D}/usr/share/atom/atom"
 	chmod 755 "${D}/usr/share/atom/resources/app/apm/bin/apm"
+	chmod 755 "${D}/usr/share/atom/resources/app/apm/bin/node"
 }
