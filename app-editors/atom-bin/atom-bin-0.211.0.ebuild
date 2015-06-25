@@ -3,10 +3,11 @@
 # $Header: $
 
 EAPI=5
+inherit unpacker
 
 DESCRIPTION=""
 HOMEPAGE=""
-SRC_URI="https://github.com/atom/atom/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/atom/atom/releases/download/v0.211.0/atom-amd64.deb -> ${P}.deb"
 
 LICENSE=""
 SLOT="0"
@@ -15,14 +16,12 @@ IUSE=""
 
 DEPEND="
 	>=net-libs/nodejs-0.10.30
-	dev-lang/python:2.7"
+"
 RDEPEND="${DEPEND}"
 
-src_compile() {
-	export EPYTHON=python2.7
-	script/build
-}
+S=${WORKDIR}
 
 src_install() {
-	script/grunt install --install-dir="${D}/usr"
+	doins -r usr
+	chmod 755 "${D}/usr/bin/atom"
 }
