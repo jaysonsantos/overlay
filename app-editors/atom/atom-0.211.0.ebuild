@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="
 	>=net-libs/nodejs-0.10.30
-	dev-lang/python:2"
+	dev-lang/python:2.7"
 RDEPEND="${DEPEND}"
 
 src_compile() {
