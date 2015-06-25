@@ -24,5 +24,5 @@ src_compile() {
 }
 
 src_install() {
-	script/grunt install --install-dir="${D}"
+	script/grunt install --install-dir="${D}/usr"
 }
