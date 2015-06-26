@@ -7,7 +7,7 @@ inherit unpacker
 
 DESCRIPTION=""
 HOMEPAGE=""
-SRC_URI="https://github.com/atom/atom/releases/download/v0.211.0/atom-amd64.deb -> ${P}.deb"
+SRC_URI="https://github.com/atom/atom/releases/download/v${PV}/atom-amd64.deb -> ${P}.deb"
 
 LICENSE=""
 SLOT="0"
