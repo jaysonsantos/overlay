@@ -25,6 +25,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_configure() {
+	export ZEAL_VERSION="${PV}" 
 	eqmake5
 }
 
