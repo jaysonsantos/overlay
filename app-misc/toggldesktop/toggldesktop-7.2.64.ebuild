@@ -29,6 +29,10 @@ src_install() {
 	chmod 755 "${D}/opt/toggldesktop/TogglDesktop"
 }
 
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
 pkg_postinst() {
 	gnome2_icon_cache_update
 }
