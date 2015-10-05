@@ -3,7 +3,7 @@
 # $Id$
 
 EAPI=5
-inherit unpacker
+inherit unpacker gnome2-utils
 
 DESCRIPTION=""
 HOMEPAGE=""
